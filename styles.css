@@ -129,9 +129,12 @@ a { color: inherit; text-decoration: none; }
 .briefCard strong { font-size: 14px; }
 .briefCard small { margin-top: 4px; color: #9fb6c8; font-size: 11px; line-height: 1.55; }
 .copyBrief { margin-top: 34px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.copyBrief button { min-height: 50px; padding: 0 24px; border: 0; border-radius: 11px; background: var(--teal); color: white; font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 25px rgb(36 154 140 / 18%); }
-.copyBrief button:hover { background: #1e857a; }
-.copyBrief button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.copyBrief button, .copyBrief .issueButton { min-height: 50px; padding: 0 24px; border-radius: 11px; font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; }
+.copyBrief .issueButton { display: inline-flex; align-items: center; justify-content: center; border: 0; background: var(--teal); color: white; box-shadow: 0 10px 25px rgb(36 154 140 / 18%); }
+.copyBrief button { border: 1px solid rgb(255 255 255 / 34%); background: transparent; color: white; }
+.copyBrief .issueButton:hover { background: #1e857a; }
+.copyBrief button:hover { border-color: #83dbcf; color: #83dbcf; }
+.copyBrief button:focus-visible, .copyBrief .issueButton:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .copyBrief [role="status"] { min-height: 22px; color: #a9bfd1; font-size: 11px; }
 .briefHint { margin: 14px 0 0; color: #7f9aaf; font-size: 11px; }
 
@@ -188,7 +191,7 @@ a { color: inherit; text-decoration: none; }
   .briefCard { padding: 30px 24px; }
   .briefCard ol { grid-template-columns: 1fr; }
   .copyBrief { align-items: stretch; flex-direction: column; }
-  .copyBrief button { width: 100%; }
+  .copyBrief button, .copyBrief .issueButton { width: 100%; }
   .trustGrid { gap: 45px; }
   .footer { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 35px; }
 }
