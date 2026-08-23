@@ -24,7 +24,7 @@ button?.addEventListener("click", async () => {
   try {
     await writeBrief();
     button.textContent = "已复制需求清单";
-    status.textContent = "已复制，可以回到原聊天窗口粘贴。";
+    status.textContent = "已复制，可回到原聊天窗口粘贴并补充答案。";
   } catch {
     status.textContent = "复制失败，请手动记录上面的四项信息。";
   }
