@@ -1,0 +1,58 @@
+name: 经营数据分析咨询
+description: 用四个业务问题确认 ¥499 验证版是否适合你；请勿上传原始数据或个人信息
+title: "[咨询] 经营数据分析验证版"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢咨询。这里仅做字段与范围适配，不需要上传原始表格。
+
+        请勿填写姓名、电话、地址、账号、密码、订单明细或其他个人信息。确认适合后，再另行约定脱敏样表的安全传递方式。
+  - type: dropdown
+    id: channels
+    attributes:
+      label: 经营渠道
+      description: 目前需要合并分析哪些渠道的数据？
+      multiple: true
+      options:
+        - 淘宝 / 天猫
+        - 抖音 / 抖店
+        - 京东
+        - 拼多多
+        - 小红书
+        - 独立站
+        - 线下门店
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: period
+    attributes:
+      label: 分析周期
+      description: 例如最近一个月或最近一个季度
+      placeholder: 最近三个月
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 最想回答的经营问题
+      description: 请描述 1—3 个具体问题，不要填写客户或订单个人信息
+      placeholder: 例如：哪个渠道真正赚钱？广告是否值得继续投？
+    validations:
+      required: true
+  - type: textarea
+    id: tables
+    attributes:
+      label: 现有导出表及主要字段
+      description: 只需说明表格数量和字段名称，暂不上传文件
+      placeholder: 例如：订单表 1 份，包含日期、订单号、渠道、商品、实收金额、退款金额；广告表 1 份，包含日期、渠道、花费、点击、新客数。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 数据边界确认
+      options:
+        - label: 我不会在这里上传原始数据，也不会填写姓名、电话、地址、账号密码等敏感信息。
+          required: true
